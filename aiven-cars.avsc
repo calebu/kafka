@@ -1,0 +1,24 @@
+{
+   "namespace": "cars.avro_producer.aiven.avro",
+   "type": "record",
+   "name": "cars",
+   "fields": [
+    {"name": "car", "type": "string"},
+    {"name": "mpg", "type": "double"},
+    {"name": "cylinders", "type": "int"},
+    {"name": "displacement", "type": "double"},
+    {"name": "horsepower", "type": "double"},
+    {"name": "weight", "type": "double"},
+    {"name": "acceleration", "type": "double"},
+    {"name": "model", "type": "int"},
+    {"name": "origin", "type": {
+                "type": "enum",
+                "name": "cars_origin",
+                "namespace": "origin.cars.avro_producer.aiven.avro",
+                "symbols": [
+                    "Europe", "Japan", "US"
+                ]
+            }
+	}
+    ]
+ }
